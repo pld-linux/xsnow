@@ -1,16 +1,18 @@
-Summary:     Xsnow will spread Christmas cheer on your X display
-Summary(de): Xsnow bringt Weihnachtsstimmung auf Ihren X-Bildschirm
-Summary(fr): Xsnow va projeter l'esprit de noel sur votre écran X.
-Summary(pl): Xsnow wprowadzi ekran X-ów w nastrój Bo¿ego Narodzenia
-Summary(tr): X ekranýna kar yaðdýrýr
-Name:        xsnow
-Version:     1.40
-Release:     7
-Copyright:   MIT
-Group:       X11/Amusements
-Source0:     ftp://ftp.x.org/contrib/games/%{name}-%{version}.tar.Z
-Source1:     xsnow.wmconfig
-BuildRoot:   /tmp/%{name}-%{version}-root
+Summary:	Xsnow will spread Christmas cheer on your X display
+Summary(de):	Xsnow bringt Weihnachtsstimmung auf Ihren X-Bildschirm
+Summary(fr):	Xsnow va projeter l'esprit de noel sur votre écran X.
+Summary(pl):	Xsnow wprowadzi ekran X-ów w nastrój Bo¿ego Narodzenia
+Summary(tr):	X ekranýna kar yaðdýrýr
+Name:		xsnow
+Version:	1.40
+Release:	8
+Copyright:	MIT
+Group:		X11/Amusements
+Group(pl):	X11/Rozrywka
+Source0:	ftp://ftp.x.org/contrib/games/%{name}-%{version}.tar.Z
+Source1:	xsnow.wmconfig
+BuildPrereq:	XFree86-devel
+BuildRoot:	/tmp/%{name}-%{version}-root
 
 %description
 A continual gentle snowfall is accompanied by Santa Claus flying his
@@ -47,18 +49,33 @@ make CCOPTIONS="$RPM_OPT_FLAGS"
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT/etc/X11/wmconfig
 
-make install install.man DESTDIR=$RPM_BUILD_ROOT
+make install DESTDIR=$RPM_BUILD_ROOT
+make install.man MANDIR=$RPM_BUILD_ROOT/usr/X11R6/share/man/man1
+
 install %{SOURCE1} $RPM_BUILD_ROOT/etc/X11/wmconfig/xsnow
+
+gzip -9nf $RPM_BUILD_ROOT/usr/X11R6/share/man/man1/xsnow.1x
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
-%config %attr(644, root, root) /etc/X11/wmconfig/xsnow
-%attr(755, root, root) /usr/X11R6/bin/xsnow
-%attr(644, root,  man) /usr/X11R6/man/man1/xsnow.1x
+%defattr(644,root,root,755)
+%config /etc/X11/wmconfig/xsnow
+%attr(755,root,root) /usr/X11R6/bin/xsnow
+/usr/X11R6/share/man/man1/*
 
 %changelog
+* Mon May 10 1999 Piotr Czerwiñski <pius@pld.org.pl>
+  [1.40-8]
+- added Group(pl),
+- added BuildPrereq: XFree86-devel,
+- removed man group from man pages,
+- added gzipping man pages,
+- minor modifications to the spec file,
+- recompiled on rpm 3,
+- package is now FHS 2.0 compliant. 
+
 * Fri Sep 25 1998 Wojtek ¦lusarczyk <wojtek@shadow.eu.org>
   [1.40-7]
 - macro %%{name} in Source,
