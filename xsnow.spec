@@ -61,7 +61,7 @@ install -d $RPM_BUILD_ROOT{%{_applnkdir}/Amusements,%{_pixmapsdir}}
 	BINDIR=%{_bindir}
 
 install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Amusements
-install %{SOURCE2} $RPM_BUILD_ROOT,%{_pixmapsdir}
+install %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -71,4 +71,4 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/%{name}
 %{_mandir}/man1/*
 %{_applnkdir}/Amusements/xsnow.desktop
-,%{_pixmapsdir}/*
+%{_pixmapsdir}/*
