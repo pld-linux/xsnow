@@ -23,23 +23,23 @@ sleigh around your screen. Don't forget to shake the snow off those
 windows every now and then!
 
 %description -l de
-Umgeben von sanftem Schneegestöber fliegt Sankt Nikolaus in seinem 
-Schlitten auf Ihrem Bildschirm umher. Vergessen Sie nicht, den Schnee 
-gelegentlich von den Fenstern zu wischen! 
+Umgeben von sanftem Schneegestöber fliegt Sankt Nikolaus in seinem
+Schlitten auf Ihrem Bildschirm umher. Vergessen Sie nicht, den Schnee
+gelegentlich von den Fenstern zu wischen!
 
 %description -l fr
-Une douce chute de neige continue s'accompage du père Noël conduisant son
-traineau à travers votre écran. N'oubliez pas de secouer la neige de ces
-fenêtres de temps en temps !
+Une douce chute de neige continue s'accompage du père Noël conduisant
+son traineau à travers votre écran. N'oubliez pas de secouer la neige
+de ces fenêtres de temps en temps !
 
 %description -l pl
-Pada ¶nieg, a ¦wiêty Miko³aj fruwa na swoich saniach po ekranie.
-Nie zapomnij od czasu do czasu strz±sn±æ ¶nieg z okienek!
+Pada ¶nieg, a ¦wiêty Miko³aj fruwa na swoich saniach po ekranie. Nie
+zapomnij od czasu do czasu strz±sn±æ ¶nieg z okienek!
 
 %description -l tr
 Noel Baba'nýn geyikleriyle birlikte karlar altýnda uçuþunu seyretmek
-isterseniz xsnow kurun. Arada bir pencerelerin yerlerini deðiþtirip karlarý
-daðýtmayý unutmayýn.
+isterseniz xsnow kurun. Arada bir pencerelerin yerlerini deðiþtirip
+karlarý daðýtmayý unutmayýn.
 
 %prep
 %setup -q
