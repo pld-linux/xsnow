@@ -9,5 +9,6 @@ Icon=xsnow.png
 Exec=xsnow
 Terminal=false
 Type=Application
+Categories=Game;Simulation;
 Encoding=UTF-8
 # vi: encoding=utf-8
