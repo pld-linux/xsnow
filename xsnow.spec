@@ -65,14 +65,14 @@ xmkmf
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_applnkdir}/Amusements,%{_pixmapsdir},%{xscreensaverdir}}
+install -d $RPM_BUILD_ROOT{%{_desktopdir},%{_pixmapsdir},%{xscreensaverdir}}
 
 %{__make} install install.man \
 	DESTDIR=$RPM_BUILD_ROOT \
 	MANDIR=%{_mandir}/man1 \
 	BINDIR=%{_bindir}
 
-install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Amusements
+install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
 install %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}
 install %{SOURCE3} $RPM_BUILD_ROOT%{xscreensaverdir}
 
@@ -83,6 +83,6 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/%{name}
 %{_mandir}/man1/*
-%{_applnkdir}/Amusements/xsnow.desktop
+%{_desktopdir}/*
 %{_pixmapsdir}/*
 %{xscreensaverdir}/*
