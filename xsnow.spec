@@ -19,8 +19,6 @@ URL:		http://www.euronet.nl/~rja/Xsnow/
 BuildRequires:	XFree86-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_prefix		/usr/X11R6
-%define 	_mandir 	%{_prefix}/man
 %define		xscreensaverdir	/etc/X11/xscreensaver
 
 %description
