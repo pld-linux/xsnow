@@ -46,13 +46,13 @@ karlarý daðýtmayý unutmayýn.
 
 %build
 xmkmf
-make CCOPTIONS="$RPM_OPT_FLAGS"
+%{__make} CCOPTIONS="$RPM_OPT_FLAGS"
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_applnkdir}/Amusements
 
-make DESTDIR=$RPM_BUILD_ROOT \
+%{__make} DESTDIR=$RPM_BUILD_ROOT \
 	MANDIR=%{_mandir}/man1 \
 	BINDIR=%{_bindir} \
 	install install.man 
