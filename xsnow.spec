@@ -4,7 +4,7 @@ Summary(fr):	Xsnow va projeter l'esprit de noel sur votre écran X
 Summary(pl):	Xsnow wprowadzi ekran X-ów w nastrój Bo¿ego Narodzenia
 Summary(tr):	X ekranýna kar yaðdýrýr
 Name:		xsnow
-Version:	1.41
+Version:	1.42
 Release:	1
 License:	MIT
 Group:		X11/Amusements
@@ -50,7 +50,7 @@ karlarý daðýtmayý unutmayýn.
 
 %build
 xmkmf
-%{__make} CCOPTIONS="%{rpmcflags}"
+%{__make} CCOPTIONS="%{rpmcflags}" CC=%{__cc}
 
 %install
 rm -rf $RPM_BUILD_ROOT
