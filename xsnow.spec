@@ -69,11 +69,3 @@ rm -rf $RPM_BUILD_ROOT
 %config /etc/X11/wmconfig/%{name}
 %attr(755,root,root) %{_bindir}/%{name}
 %{_mandir}/man1/*
-
-%changelog
-* Thu May 20 1999 Piotr Czerwiñski <pius@pld.org.pl> 
-  [1.40-8]
-- package is FHS 2.0 compliant,
-- spec file based on RH version; rewritten for PLD use by me,
-  Marcin 'Qrczak' Kowalczyk <qrczak@knm.org.pl>,
-  and Wojtek ¦lusarczyk <wojtek@shadow.eu.org>.
