@@ -15,6 +15,7 @@ BuildPrereq:	XFree86-devel
 BuildRoot:	/tmp/%{name}-%{version}-root
 
 %define	_prefix	/usr/X11R6
+%define _mandir %{_prefix}/man
 
 %description
 A continual gentle snowfall is accompanied by Santa Claus flying his
