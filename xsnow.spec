@@ -1,7 +1,9 @@
 Summary:	Xsnow will spread Christmas cheer on your X display
 Summary(de):	Xsnow bringt Weihnachtsstimmung auf Ihren X-Bildschirm
+Summary(es):	Para aquellos que desean una Navidad, los 12 meses del año
 Summary(fr):	Xsnow va projeter l'esprit de noel sur votre écran X
 Summary(pl):	Xsnow wprowadzi ekran X-ów w nastrój Bo¿ego Narodzenia
+Summary(pt_BR):	Para aqueles que desejam o Natal 12 meses por ano
 Summary(tr):	X ekranýna kar yaðdýrýr
 Name:		xsnow
 Version:	1.42
@@ -31,6 +33,11 @@ Umgeben von sanftem Schneegestöber fliegt Sankt Nikolaus in seinem
 Schlitten auf Ihrem Bildschirm umher. Vergessen Sie nicht, den Schnee
 gelegentlich von den Fenstern zu wischen!
 
+%description -l es
+Nieve cayendo continuamente acompañada por el vuelo de Papa Noel por
+tu pantalla. ¡Y no te olvides sacudir las ventanas, de vez en cuando,
+para quitar la nieve!
+
 %description -l fr
 Une douce chute de neige continue s'accompage du père Noël conduisant
 son traineau à travers votre écran. N'oubliez pas de secouer la neige
@@ -39,6 +46,11 @@ de ces fenêtres de temps en temps !
 %description -l pl
 Pada ¶nieg, a ¦wiêty Miko³aj fruwa na swoich saniach po ekranie. Nie
 zapomnij od czasu do czasu strz±sn±æ ¶nieg z okienek!
+
+%description -l pt_BR
+Neve caindo continuamente acompanhada pelo vôo do Papai Noel pela sua
+tela. Não se esqueça de chacoalhar as janelas de vez em quando para
+tirar a neve!
 
 %description -l tr
 Noel Baba'nýn geyikleriyle birlikte karlar altýnda uçuþunu seyretmek
