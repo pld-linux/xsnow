@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=xsnow
+Comment=Snow Snow Everywhere...
+Comment[pl]=Pada ¦nieg...
+Exec=xsnow
+Terminal=0
+Type=Application
