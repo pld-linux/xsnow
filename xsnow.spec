@@ -12,11 +12,10 @@ Group(pl):	X11/Rozrywka
 Source0:	ftp://ftp.x.org/contrib/games/%{name}-%{version}.tar.Z
 Source1:	xsnow.desktop
 BuildRequires:	XFree86-devel
-BuildRoot:	/tmp/%{name}-%{version}-root
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
 %define 	_mandir 	%{_prefix}/man
-%define		_applnkdir	/usr/X11R6/share/applnk
 
 %description
 A continual gentle snowfall is accompanied by Santa Claus flying his
