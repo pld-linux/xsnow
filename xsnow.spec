@@ -4,16 +4,17 @@ Summary(fr):	Xsnow va projeter l'esprit de noel sur votre écran X
 Summary(pl):	Xsnow wprowadzi ekran X-ów w nastrój Bo¿ego Narodzenia
 Summary(tr):	X ekranýna kar yaðdýrýr
 Name:		xsnow
-Version:	1.40
-Release:	11
+Version:	1.41
+Release:	1
 License:	MIT
 Group:		X11/Amusements
 Group(de):	X11/Unterhaltung
 Group(pl):	X11/Rozrywka
-Source0:	ftp://ftp.x.org/contrib/games/%{name}-%{version}.tar.Z
+Source0:	http://www.euronet.nl/~rja/Xsnow/%{name}-%{version}.tar.gz
 Source1:	%{name}.desktop
 Source2:	%{name}.png
 Icon:		xsnow.xpm
+URL:		http://www.euronet.nl/~rja/Xsnow/
 BuildRequires:	XFree86-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
