@@ -11,6 +11,7 @@ Release:	2
 License:	MIT
 Group:		X11/Amusements
 Source0:	http://www.euronet.nl/~rja/Xsnow/%{name}-%{version}.tar.gz
+# Source0-md5:	451d8fc0a2b5393b428faa496a556036
 Source1:	%{name}.desktop
 Source2:	%{name}.png
 Source3:	%{name}.xml
