@@ -10,7 +10,7 @@ Copyright:	MIT
 Group:		X11/Amusements
 Group(pl):	X11/Rozrywka
 Source0:	ftp://ftp.x.org/contrib/games/%{name}-%{version}.tar.Z
-Source1:	xsnow.wmconfig
+Source1:	xsnow.desktop
 BuildRequires:	XFree86-devel
 BuildRoot:	/tmp/%{name}-%{version}-root
 
@@ -50,14 +50,14 @@ make CCOPTIONS="$RPM_OPT_FLAGS"
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT/etc/X11/wmconfig
+install -d $RPM_BUILD_ROOT/usr/X11R6/share/applnk/Amusements
 
 make DESTDIR=$RPM_BUILD_ROOT \
 	MANDIR=%{_mandir}/man1 \
 	BINDIR=%{_bindir} \
 	install install.man 
 
-install %{SOURCE1} $RPM_BUILD_ROOT/etc/X11/wmconfig/%{name}
+install %{SOURCE1} $RPM_BUILD_ROOT/usr/X11R6/share/applnk/Amusements
 
 gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man1/*
 
@@ -66,6 +66,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%config /etc/X11/wmconfig/%{name}
 %attr(755,root,root) %{_bindir}/%{name}
+
 %{_mandir}/man1/*
+/usr/X11R6/share/applnk/Amusements/xsnow.desktop
