@@ -5,12 +5,13 @@ Summary(pl):	Xsnow wprowadzi ekran X-ów w nastrój Bo¿ego Narodzenia
 Summary(tr):	X ekranýna kar yaðdýrýr
 Name:		xsnow
 Version:	1.42
-Release:	1
+Release:	2
 License:	MIT
 Group:		X11/Amusements
 Source0:	http://www.euronet.nl/~rja/Xsnow/%{name}-%{version}.tar.gz
 Source1:	%{name}.desktop
 Source2:	%{name}.png
+Source3:	%{name}.xml
 Icon:		xsnow.xpm
 URL:		http://www.euronet.nl/~rja/Xsnow/
 BuildRequires:	XFree86-devel
@@ -18,6 +19,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
 %define 	_mandir 	%{_prefix}/man
+%define		xscreensaverdir	/etc/X11/xscreensaver
 
 %description
 A continual gentle snowfall is accompanied by Santa Claus flying his
@@ -52,7 +54,7 @@ xmkmf
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_applnkdir}/Amusements,%{_pixmapsdir}}
+install -d $RPM_BUILD_ROOT{%{_applnkdir}/Amusements,%{_pixmapsdir},%{xscreensaverdir}}
 
 %{__make} install install.man \
 	DESTDIR=$RPM_BUILD_ROOT \
@@ -61,6 +63,7 @@ install -d $RPM_BUILD_ROOT{%{_applnkdir}/Amusements,%{_pixmapsdir}}
 
 install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Amusements
 install %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}
+install %{SOURCE3} $RPM_BUILD_ROOT%{xscreensaverdir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -71,3 +74,4 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man1/*
 %{_applnkdir}/Amusements/xsnow.desktop
 %{_pixmapsdir}/*
+%{xscreensaverdir}/*
