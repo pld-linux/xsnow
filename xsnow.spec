@@ -56,17 +56,17 @@ make DESTDIR=$RPM_BUILD_ROOT \
 	BINDIR=%{_bindir} \
 	install install.man 
 
-install %{SOURCE1} $RPM_BUILD_ROOT/etc/X11/wmconfig/xsnow
+install %{SOURCE1} $RPM_BUILD_ROOT/etc/X11/wmconfig/%{name}
 
-gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man1/xsnow.1x
+gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man1/*
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%config /etc/X11/wmconfig/xsnow
-%attr(755,root,root) %{_bindir}/xsnow
+%config /etc/X11/wmconfig/%{name}
+%attr(755,root,root) %{_bindir}/%{name}
 %{_mandir}/man1/*
 
 %changelog
