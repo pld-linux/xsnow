@@ -14,7 +14,7 @@ Source1:	xsnow.wmconfig
 BuildPrereq:	XFree86-devel
 BuildRoot:	/tmp/%{name}-%{version}-root
 
-%define	_prefix		/usr/X11R6
+%define	_prefix	/usr/X11R6
 
 %description
 A continual gentle snowfall is accompanied by Santa Claus flying his
@@ -70,36 +70,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man1/*
 
 %changelog
-* Mon May 10 1999 Piotr Czerwiñski <pius@pld.org.pl>
+* Thu May 20 1999 Piotr Czerwiñski <pius@pld.org.pl> 
   [1.40-8]
-- added Group(pl),
-- added BuildPrereq: XFree86-devel,
-- removed man group from man pages,
-- added gzipping man pages,
-- minor modifications to the spec file,
-- recompiled on rpm 3,
-- package is now FHS 2.0 compliant. 
-
-* Fri Sep 25 1998 Wojtek ¦lusarczyk <wojtek@shadow.eu.org>
-  [1.40-7]
-- macro %%{name} in Source,
-- macro %%{SOURCE1} in %install.
-
-* Fri Sep 25 1998 Marcin 'Qrczak' Kowalczyk <qrczak@knm.org.pl>
-- added BuildRoot, allowing building from non-root account,
-- added pl translation,
-- `mkdir -p' replaced with more standard `install -d',
-- added full %attr description in %files,
-- use $RPM_OPT_FLAGS.
-
-* Fri May 08 1998 Prospector System <bugs@redhat.com>
-- translations modified for de, fr, tr
-
-* Wed Oct 22 1997 Donnie Barnes <djb@redhat.com>
-- added wmconfig entry
-
-* Mon Oct 20 1997 Donnie Barnes <djb@redhat.com>
-- spec file cleanups
-
-* Thu Jul 31 1997 Erik Troan <ewt@redhat.com>
-- built against glibc
+- package is FHS 2.0 compliant,
+- spec file based on RH version; rewritten for PLD use by me,
+  Marcin 'Qrczak' Kowalczyk <qrczak@knm.org.pl>,
+  and Wojtek ¦lusarczyk <wojtek@shadow.eu.org>.
