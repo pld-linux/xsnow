@@ -14,6 +14,8 @@ Source1:	xsnow.wmconfig
 BuildPrereq:	XFree86-devel
 BuildRoot:	/tmp/%{name}-%{version}-root
 
+%define	_prefix		/usr/X11R6
+
 %description
 A continual gentle snowfall is accompanied by Santa Claus flying his
 sleigh around your screen. Don't forget to shake the snow off those
@@ -49,12 +51,14 @@ make CCOPTIONS="$RPM_OPT_FLAGS"
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT/etc/X11/wmconfig
 
-make install DESTDIR=$RPM_BUILD_ROOT
-make install.man MANDIR=$RPM_BUILD_ROOT/usr/X11R6/share/man/man1
+make DESTDIR=$RPM_BUILD_ROOT \
+	MANDIR=%{_mandir}/man1 \
+	BINDIR=%{_bindir} \
+	install install.man 
 
 install %{SOURCE1} $RPM_BUILD_ROOT/etc/X11/wmconfig/xsnow
 
-gzip -9nf $RPM_BUILD_ROOT/usr/X11R6/share/man/man1/xsnow.1x
+gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man1/xsnow.1x
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -62,8 +66,8 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %config /etc/X11/wmconfig/xsnow
-%attr(755,root,root) /usr/X11R6/bin/xsnow
-/usr/X11R6/share/man/man1/*
+%attr(755,root,root) %{_bindir}/xsnow
+%{_mandir}/man1/*
 
 %changelog
 * Mon May 10 1999 Piotr Czerwiñski <pius@pld.org.pl>
