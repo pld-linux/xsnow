@@ -1,6 +1,6 @@
 Summary:	Xsnow will spread Christmas cheer on your X display
 Summary(de):	Xsnow bringt Weihnachtsstimmung auf Ihren X-Bildschirm
-Summary(fr):	Xsnow va projeter l'esprit de noel sur votre écran X.
+Summary(fr):	Xsnow va projeter l'esprit de noel sur votre écran X
 Summary(pl):	Xsnow wprowadzi ekran X-ów w nastrój Bo¿ego Narodzenia
 Summary(tr):	X ekranýna kar yaðdýrýr
 Name:		xsnow
@@ -49,7 +49,7 @@ karlarý daðýtmayý unutmayýn.
 
 %build
 xmkmf
-%{__make} CCOPTIONS="%{!?debug:$RPM_OPT_FLAGS}%{?debug:-O0 -g}"
+%{__make} CCOPTIONS="%{rpmcflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
