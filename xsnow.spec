@@ -11,7 +11,7 @@ Group:		X11/Amusements
 Group(pl):	X11/Rozrywka
 Source0:	ftp://ftp.x.org/contrib/games/%{name}-%{version}.tar.Z
 Source1:	xsnow.wmconfig
-BuildPrereq:	XFree86-devel
+BuildRequires:	XFree86-devel
 BuildRoot:	/tmp/%{name}-%{version}-root
 
 %define	_prefix	/usr/X11R6
