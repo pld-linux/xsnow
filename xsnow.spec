@@ -5,7 +5,7 @@ Summary(pl):	Xsnow wprowadzi ekran X-ów w nastrój Bo¿ego Narodzenia
 Summary(tr):	X ekranýna kar yaðdýrýr
 Name:		xsnow
 Version:	1.40
-Release:	8
+Release:	10
 Copyright:	MIT
 Group:		X11/Amusements
 Group(pl):	X11/Rozrywka
@@ -16,6 +16,7 @@ BuildRoot:	/tmp/%{name}-%{version}-root
 
 %define		_prefix		/usr/X11R6
 %define 	_mandir 	%{_prefix}/man
+%define		_applnkdir	/usr/X11R6/share/applnk
 
 %description
 A continual gentle snowfall is accompanied by Santa Claus flying his
@@ -50,14 +51,14 @@ make CCOPTIONS="$RPM_OPT_FLAGS"
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT/usr/X11R6/share/applnk/Amusements
+install -d $RPM_BUILD_ROOT%{_applnkdir}/Amusements
 
 make DESTDIR=$RPM_BUILD_ROOT \
 	MANDIR=%{_mandir}/man1 \
 	BINDIR=%{_bindir} \
 	install install.man 
 
-install %{SOURCE1} $RPM_BUILD_ROOT/usr/X11R6/share/applnk/Amusements
+install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Amusements
 
 gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man1/*
 
@@ -69,4 +70,4 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/%{name}
 
 %{_mandir}/man1/*
-/usr/X11R6/share/applnk/Amusements/xsnow.desktop
+%{_applnkdir}/Amusements/xsnow.desktop
