@@ -5,12 +5,15 @@ Summary(pl):	Xsnow wprowadzi ekran X-ów w nastrój Bo¿ego Narodzenia
 Summary(tr):	X ekranýna kar yaðdýrýr
 Name:		xsnow
 Version:	1.40
-Release:	10
-Copyright:	MIT
+Release:	11
+License:	MIT
 Group:		X11/Amusements
+Group(de):	X11/Unterhaltung
 Group(pl):	X11/Rozrywka
 Source0:	ftp://ftp.x.org/contrib/games/%{name}-%{version}.tar.Z
-Source1:	xsnow.desktop
+Source1:	%{name}.desktop
+Source2:	%{name}.png
+Icon:		xsnow.xpm
 BuildRequires:	XFree86-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -46,20 +49,19 @@ karlarý daðýtmayý unutmayýn.
 
 %build
 xmkmf
-%{__make} CCOPTIONS="$RPM_OPT_FLAGS"
+%{__make} CCOPTIONS="%{!?debug:$RPM_OPT_FLAGS}%{?debug:-O0 -g}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_applnkdir}/Amusements
+install -d $RPM_BUILD_ROOT{%{_applnkdir}/Amusements,%{_pixmapsdir}}
 
-%{__make} DESTDIR=$RPM_BUILD_ROOT \
+%{__make} install install.man \
+	DESTDIR=$RPM_BUILD_ROOT \
 	MANDIR=%{_mandir}/man1 \
-	BINDIR=%{_bindir} \
-	install install.man 
+	BINDIR=%{_bindir}
 
 install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Amusements
-
-gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man1/*
+install %{SOURCE2} $RPM_BUILD_ROOT,%{_pixmapsdir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -67,6 +69,6 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/%{name}
-
 %{_mandir}/man1/*
 %{_applnkdir}/Amusements/xsnow.desktop
+,%{_pixmapsdir}/*
