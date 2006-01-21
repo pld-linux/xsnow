@@ -15,7 +15,6 @@ Source0:	http://www.euronet.nl/~rja/Xsnow/%{name}-%{version}.tar.gz
 Source1:	%{name}.desktop
 Source2:	%{name}.png
 Source3:	%{name}.xml
-Icon:		xsnow.xpm
 URL:		http://www.euronet.nl/~rja/Xsnow/
 BuildRequires:	XFree86-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
