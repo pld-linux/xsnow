@@ -60,7 +60,7 @@ karlarý daðýtmayý unutmayýn.
 
 %build
 xmkmf
-%{__make} CCOPTIONS="%{rpmcflags}" CC=%{__cc}
+%{__make} CCOPTIONS="%{rpmcflags}" CC="%{__cc}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
