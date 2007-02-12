@@ -1,10 +1,10 @@
 Summary:	Xsnow will spread Christmas cheer on your X display
-Summary(de):	Xsnow bringt Weihnachtsstimmung auf Ihren X-Bildschirm
-Summary(es):	Para aquellos que desean una Navidad, los 12 meses del año
-Summary(fr):	Xsnow va projeter l'esprit de noel sur votre écran X
-Summary(pl):	Xsnow wprowadzi ekran X-ów w nastrój Bo¿ego Narodzenia
-Summary(pt_BR):	Para aqueles que desejam o Natal 12 meses por ano
-Summary(tr):	X ekranına kar yağdırır
+Summary(de.UTF-8):   Xsnow bringt Weihnachtsstimmung auf Ihren X-Bildschirm
+Summary(es.UTF-8):   Para aquellos que desean una Navidad, los 12 meses del aÃ±o
+Summary(fr.UTF-8):   Xsnow va projeter l'esprit de noel sur votre Ã©cran X
+Summary(pl.UTF-8):   Xsnow wprowadzi ekran X-Ã³w w nastrÃ³j BoÅ¼ego Narodzenia
+Summary(pt_BR.UTF-8):   Para aqueles que desejam o Natal 12 meses por ano
+Summary(tr.UTF-8):   X ekranÄ±na kar yaÄŸdÄ±rÄ±r
 Name:		xsnow
 Version:	1.42
 Release:	2
@@ -26,34 +26,34 @@ A continual gentle snowfall is accompanied by Santa Claus flying his
 sleigh around your screen. Don't forget to shake the snow off those
 windows every now and then!
 
-%description -l de
-Umgeben von sanftem Schneegestöber fliegt Sankt Nikolaus in seinem
+%description -l de.UTF-8
+Umgeben von sanftem SchneegestÃ¶ber fliegt Sankt Nikolaus in seinem
 Schlitten auf Ihrem Bildschirm umher. Vergessen Sie nicht, den Schnee
 gelegentlich von den Fenstern zu wischen!
 
-%description -l es
-Nieve cayendo continuamente acompañada por el vuelo de Papa Noel por
-tu pantalla. ¡Y no te olvides sacudir las ventanas, de vez en cuando,
+%description -l es.UTF-8
+Nieve cayendo continuamente acompaÃ±ada por el vuelo de Papa Noel por
+tu pantalla. Â¡Y no te olvides sacudir las ventanas, de vez en cuando,
 para quitar la nieve!
 
-%description -l fr
-Une douce chute de neige continue s'accompage du père Noël conduisant
-son traineau à travers votre écran. N'oubliez pas de secouer la neige
-de ces fenêtres de temps en temps !
+%description -l fr.UTF-8
+Une douce chute de neige continue s'accompage du pÃ¨re NoÃ«l conduisant
+son traineau Ã  travers votre Ã©cran. N'oubliez pas de secouer la neige
+de ces fenÃªtres de temps en temps !
 
-%description -l pl
-Pada ¶nieg, a ¦wiêty Miko³aj fruwa na swoich saniach po ekranie. Nie
-zapomnij od czasu do czasu strz±sn±æ ¶nieg z okienek!
+%description -l pl.UTF-8
+Pada Å›nieg, a ÅšwiÄ™ty MikoÅ‚aj fruwa na swoich saniach po ekranie. Nie
+zapomnij od czasu do czasu strzÄ…snÄ…Ä‡ Å›nieg z okienek!
 
-%description -l pt_BR
-Neve caindo continuamente acompanhada pelo vôo do Papai Noel pela sua
-tela. Não se esqueça de chacoalhar as janelas de vez em quando para
+%description -l pt_BR.UTF-8
+Neve caindo continuamente acompanhada pelo vÃ´o do Papai Noel pela sua
+tela. NÃ£o se esqueÃ§a de chacoalhar as janelas de vez em quando para
 tirar a neve!
 
-%description -l tr
-Noel Baba'nın geyikleriyle birlikte karlar altında uçuşunu seyretmek
-isterseniz xsnow kurun. Arada bir pencerelerin yerlerini değiştirip
-karları dağıtmayı unutmayın.
+%description -l tr.UTF-8
+Noel Baba'nÄ±n geyikleriyle birlikte karlar altÄ±nda uÃ§uÅŸunu seyretmek
+isterseniz xsnow kurun. Arada bir pencerelerin yerlerini deÄŸiÅŸtirip
+karlarÄ± daÄŸÄ±tmayÄ± unutmayÄ±n.
 
 %prep
 %setup -q
