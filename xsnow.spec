@@ -1,10 +1,10 @@
 Summary:	Xsnow will spread Christmas cheer on your X display
-Summary(de.UTF-8):   Xsnow bringt Weihnachtsstimmung auf Ihren X-Bildschirm
-Summary(es.UTF-8):   Para aquellos que desean una Navidad, los 12 meses del año
-Summary(fr.UTF-8):   Xsnow va projeter l'esprit de noel sur votre écran X
-Summary(pl.UTF-8):   Xsnow wprowadzi ekran X-ów w nastrój Bożego Narodzenia
-Summary(pt_BR.UTF-8):   Para aqueles que desejam o Natal 12 meses por ano
-Summary(tr.UTF-8):   X ekranına kar yağdırır
+Summary(de.UTF-8):	Xsnow bringt Weihnachtsstimmung auf Ihren X-Bildschirm
+Summary(es.UTF-8):	Para aquellos que desean una Navidad, los 12 meses del año
+Summary(fr.UTF-8):	Xsnow va projeter l'esprit de noel sur votre écran X
+Summary(pl.UTF-8):	Xsnow wprowadzi ekran X-ów w nastrój Bożego Narodzenia
+Summary(pt_BR.UTF-8):	Para aqueles que desejam o Natal 12 meses por ano
+Summary(tr.UTF-8):	X ekranına kar yağdırır
 Name:		xsnow
 Version:	1.42
 Release:	2
